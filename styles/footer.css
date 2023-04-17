@@ -21,6 +21,14 @@
 
 .email-footer {}
 
+.form-footer {
+  max-width: 520px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .email-input {
   width: 354px;
   height: 56px;
@@ -33,6 +41,10 @@
   background: #E6E3DE;
 }
 
+.email-input:hover {
+  border: 2px solid #E94D35;
+}
+
 ::placeholder {
   color: #161513;
 }
@@ -43,11 +55,18 @@
   background: #131416;
   padding: 12px 15px;
   margin-left: 24px;
+  transition: 0.7s;
 
   font-size: 23px;
   line-height: 32px;
   letter-spacing: 0.48px;
   color: #FFFFFF;
+}
+
+.btn-email:hover {
+  color: #E94D35;
+  border: 1px solid #E94D35;
+  transition: 0.7s;
 }
 
 .black-footer {
@@ -78,10 +97,16 @@
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+  transition: 0.3s;
 }
 
 .list-item-footer:nth-child(n+2) {
   margin-left: 46px;
+}
+
+.list-item-footer:hover {
+  color: #E94D35;
+  transition: 0.3s;
 }
 
 .base-2 {
@@ -90,7 +115,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 190px 26px 190px;
+  padding: 0 190px;
 }
 
 .by-nickname {
@@ -109,4 +134,24 @@
 
 .image-social {
   margin-left: 16px;
+}
+
+@media screen and (max-width: 1270px) {
+  .white-footer {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .base-1 {
+    padding: 25px;
+  }
+  .base-2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .by-nickname-text {
+    text-align: center;
+  }
 }
